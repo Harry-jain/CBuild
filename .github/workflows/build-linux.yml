@@ -1,0 +1,31 @@
+name: Linux Static Build CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y musl-tools build-essential cmake libx11-dev
+
+    - name: Configure CMake
+      run: cmake -B build -DCMAKE_BUILD_TYPE=Release -DCBUILD_STATIC_MUSL=ON
+
+    - name: Build
+      run: cmake --build build
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: CBuild-Linux-x64
+        path: build/CBuild

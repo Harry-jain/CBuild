@@ -1,0 +1,9 @@
+build/
+.cache/
+*.o
+*.a
+*.exe
+*.obj
+*.pdb
+*.ilk
+.vscode/

@@ -1,0 +1,5 @@
+---
+Checks: "bugprone-*,-bugprone-narrowing-conversions,modernize-*,-modernize-use-trailing-return-type,performance-*,readability-*,-readability-magic-numbers"
+WarningsAsErrors: ""
+HeaderFilterRegex: "src/.*"
+CheckOptions: []
