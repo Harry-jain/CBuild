@@ -1,4 +1,4 @@
-# CBuild IDE Workstation
+# CBuild C library for UI deevloepment and IDE Workstation
 
 ## Overview
 CBuild is a hyper-optimized, standalone, zero-dependency C++ IDE Workstation engineered explicitly for Operating System development and bare-metal compilation pipelines.
